@@ -4,42 +4,42 @@ import { Star } from 'lucide-react'
 
 const reviews = [
   {
-    name: 'Sarah Mitchell',
+    name: 'Olivia Harper',
     role: 'Travel Blogger',
     rating: 5,
     text: 'The hardshell carry-on survived a 3-week European trip without a scratch. The spinner wheels are incredibly smooth and the interior organization is top-notch.',
     product: 'Altitude Hardshell',
   },
   {
-    name: 'James Chen',
+    name: 'Marcus Webb',
     role: 'Business Traveler',
     rating: 5,
     text: 'I have tried dozens of travel bags over the years. The weekender from Outdoornests is hands down the best I have ever used. Perfect for short trips.',
     product: 'Canyon Weekender',
   },
   {
-    name: 'Maria Rodriguez',
+    name: 'Lena Novak',
     role: 'Photographer',
     rating: 4,
     text: 'Great backpack for carrying camera gear on outdoor shoots. The padding is excellent and the waterproof coating has saved my equipment more than once.',
     product: 'Summit Backpack',
   },
   {
-    name: 'David Park',
+    name: 'Ethan Cole',
     role: 'Digital Nomad',
     rating: 5,
     text: 'Living out of a suitcase for 6 months straight and the Altitude Hardshell has held up beautifully. Worth every penny for serious travelers.',
     product: 'Altitude Hardshell',
   },
   {
-    name: 'Emily Watson',
+    name: 'Sophie Tan',
     role: 'Adventure Guide',
     rating: 5,
     text: 'The packing cubes changed my life. I can organize everything perfectly and they compress so well. A must-have for any trip.',
     product: 'Trail Organizer Set',
   },
   {
-    name: 'Alex Turner',
+    name: 'Ryan Gallagher',
     role: 'Frequent Flyer',
     rating: 4,
     text: 'Sleek design, durable build, and fits perfectly in overhead bins. The aluminum finish still looks brand new after months of heavy use.',
