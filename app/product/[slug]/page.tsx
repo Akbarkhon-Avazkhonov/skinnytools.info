@@ -76,13 +76,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 <button className="px-8 py-3.5 rounded-full bg-[var(--terminal-amber)] text-[var(--deep-altitude)] font-semibold hover:shadow-lg hover:shadow-[var(--terminal-amber)]/30 transition-all duration-300">
                   Add to Cart
                 </button>
-                <button className="px-8 py-3.5 rounded-full border-2 border-[var(--deep-altitude)]/20 text-[var(--deep-altitude)] font-semibold hover:border-[var(--terminal-amber)] hover:text-[var(--terminal-amber)] transition-all duration-300">
-                  Save to Wishlist
-                </button>
-              </div>
-
-              {/* Features */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-[var(--deep-altitude)]/10">
+                <button className="px-8 py-3.5 rounded-full border-2 border-[var(--deep-altitude)]/20 text-[var(--deep-altitude)] font-semit-8 border-t border-[var(--deep-altitude)]/10">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-[var(--passport-teal)]/10 flex items-center justify-center">
                     <Truck size={18} className="text-[var(--passport-teal)]" />
