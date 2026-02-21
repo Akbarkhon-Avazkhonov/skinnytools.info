@@ -40,27 +40,7 @@ export function Header() {
           </nav>
 
           {/* Right actions */}
-          <div className="flex items-center gap-3">
-            <button className="relative p-2 text-[var(--deep-altitude)]/70 hover:text-[var(--deep-altitude)] transition-colors">
-              <ShoppingBag size={20} />
-              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[var(--terminal-amber)] rounded-full text-[10px] flex items-center justify-center text-[var(--deep-altitude)] font-bold">0</span>
-            </button>
-            <Link
-              href="#shop"
-              className="hidden sm:inline-flex px-5 py-2 bg-[var(--terminal-amber)] text-[var(--deep-altitude)] text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-[var(--terminal-amber)]/30 transition-all duration-300"
-            >
-              Shop Now
-            </Link>
-
-            {/* Mobile toggle */}
-            <button
-              className="md:hidden p-2 text-[var(--deep-altitude)]"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <X size={22} /> : <Menu size={22} />}
-            </button>
-          </div>
+          
         </div>
       </div>
 
