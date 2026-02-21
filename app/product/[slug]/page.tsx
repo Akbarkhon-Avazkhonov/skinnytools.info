@@ -74,7 +74,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               {/* Action buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
                 <button className="px-8 py-3.5 rounded-full bg-[var(--terminal-amber)] text-[var(--deep-altitude)] font-semibold hover:shadow-lg hover:shadow-[var(--terminal-amber)]/30 transition-all duration-300">
-                  Add to Cart
+                  Buy on Amazon
                 </button>
                 <button className="px-8 py-3.5 rounded-full border-2 border-[var(--deep-altitude)]/20 text-[var(--deep-altitude)] font-semit-8 border-t border-[var(--deep-altitude)]/10">
                 <div className="flex items-center gap-3">
