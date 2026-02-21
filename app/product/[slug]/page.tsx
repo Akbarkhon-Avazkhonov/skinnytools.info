@@ -69,9 +69,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 {product.description}
               </p>
 
-              <div className="text-3xl font-bold text-[var(--terminal-amber)] mb-8">
-                {product.price}
-              </div>
+              
 
               {/* Action buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
