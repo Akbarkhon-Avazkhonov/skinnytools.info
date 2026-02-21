@@ -99,7 +99,7 @@ export function Featured() {
 
                 {/* Price and CTA */}
                 <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                  <span className="text-[var(--terminal-amber)] font-bold text-xl">{product.price}</span>
+                  
                   <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--terminal-amber)]/10 text-[var(--terminal-amber)] text-sm font-semibold hover:bg-[var(--terminal-amber)] hover:text-[var(--deep-altitude)] transition-all duration-300">
                     <ShoppingBag size={14} />
                     Add to Cart
