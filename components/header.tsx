@@ -5,10 +5,10 @@ import Link from 'next/link'
 import { Menu, X, ShoppingBag } from 'lucide-react'
 
 const navItems = [
-  { label: 'Product', href: '#product' },
-  { label: 'Reviews', href: '#reviews' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Product', href: '/product' },
+  { label: 'Reviews', href: '/reviews' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export function Header() {
