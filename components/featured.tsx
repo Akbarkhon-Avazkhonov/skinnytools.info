@@ -1,8 +1,10 @@
 import Image from 'next/image'
-import { Star, ShoppingBag } from 'lucide-react'
+import Link from 'next/link'
+import { Star, Eye } from 'lucide-react'
 
-const featuredProducts = [
+export const featuredProducts = [
   {
+    slug: 'nomadshell-pro-26',
     name: 'NomadShell Pro 26"',
     description: 'Polycarbonate hardshell with silent spinner wheels and TSA lock.',
     price: '$349',
@@ -13,6 +15,7 @@ const featuredProducts = [
     image: '/products/hardshell.jpg',
   },
   {
+    slug: 'canyon-weekender',
     name: 'Canyon Weekender',
     description: 'Waxed canvas with full-grain leather trim and shoe compartment.',
     price: '$189',
@@ -23,6 +26,7 @@ const featuredProducts = [
     image: '/products/weekender.jpg',
   },
   {
+    slug: 'summit-pack-45l',
     name: 'Summit Pack 45L',
     description: 'Ripstop nylon adventure backpack with hydration system.',
     price: '$229',
@@ -33,6 +37,7 @@ const featuredProducts = [
     image: '/products/backpack.jpg',
   },
   {
+    slug: 'aerocarry-aluminum',
     name: 'AeroCarry Aluminum',
     description: 'Brushed aluminum carry-on with corner guards and leather handle.',
     price: '$499',
@@ -100,10 +105,10 @@ export function Featured() {
                 {/* Price and CTA */}
                 <div className="flex items-center justify-between pt-4 border-t border-white/10">
                   
-                  <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--terminal-amber)]/10 text-[var(--terminal-amber)] text-sm font-semibold hover:bg-[var(--terminal-amber)] hover:text-[var(--deep-altitude)] transition-all duration-300">
-                    <ShoppingBag size={14} />
+                  <Link href={`/product/${product.slug}`} className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--terminal-amber)]/10 text-[var(--terminal-amber)] text-sm font-semibold hover:bg-[var(--terminal-amber)] hover:text-[var(--deep-altitude)] transition-all duration-300">
+                    <Eye size={14} />
                     View
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
