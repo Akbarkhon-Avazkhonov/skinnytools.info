@@ -1,67 +1,96 @@
-'use client'
-
-import { CheckCircle, Users, Zap, Award } from 'lucide-react'
+import { Shield, Leaf, Globe, Wrench } from 'lucide-react'
 
 const benefits = [
   {
-    icon: CheckCircle,
-    title: 'Verified Quality',
-    description: 'All equipment has been tested and approved by industry professionals.'
+    icon: Shield,
+    title: '10-Year Warranty',
+    description: 'Every product is backed by our industry-leading warranty. No questions asked.',
+    accent: 'var(--terminal-amber)',
   },
   {
-    icon: Users,
-    title: '24/7 Support',
-    description: 'Our team of experts is ready to help you anytime.'
+    icon: Leaf,
+    title: 'Eco-Conscious Materials',
+    description: 'Recycled fabrics, biodegradable packaging, and carbon-offset shipping.',
+    accent: 'var(--passport-teal)',
   },
   {
-    icon: Zap,
-    title: 'Fast Delivery',
-    description: 'Professional equipment delivery worldwide.'
+    icon: Globe,
+    title: 'Free Worldwide Shipping',
+    description: 'We deliver to 120+ countries. Your nest arrives at your doorstep, anywhere.',
+    accent: 'var(--terminal-amber)',
   },
   {
-    icon: Award,
-    title: 'Warranty',
-    description: 'Full warranty and technical support throughout the entire period of use.'
+    icon: Wrench,
+    title: 'Lifetime Repair Program',
+    description: 'Broken zipper? Cracked shell? Send it in and we will fix it for free.',
+    accent: 'var(--passport-teal)',
   },
 ]
 
 export function Benefits() {
   return (
-    <section className="relative py-24 px-4 overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-64 h-64 glass rounded-full glow-mint opacity-5" />
-      <div className="absolute bottom-20 left-10 w-80 h-80 glass rounded-full glow-orchid opacity-5" />
-
-      <div className="relative z-10 max-w-7xl mx-auto">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 paper-texture">
+      <div className="max-w-7xl mx-auto">
+        {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="font-syne text-4xl md:text-5xl font-bold mb-4 text-white">
-            Why Choose SkinnyTools
+          <span className="inline-block px-3 py-1 bg-[var(--passport-teal)]/10 text-[var(--passport-teal)] text-xs font-semibold rounded-full stamp-text tracking-widest mb-4">
+            Why Outdoornests
+          </span>
+          <h2 className="font-archivo text-4xl md:text-5xl text-[var(--deep-altitude)] mb-4 text-balance">
+            Built Different. Built to Last.
           </h2>
-          <p className="text-white/60 max-w-2xl mx-auto">
-            We offer not just equipment, but a complete solution for growing your business.
+          <p className="text-[var(--deep-altitude)]/60 max-w-xl mx-auto leading-relaxed">
+            We do not just sell luggage. We engineer mobile sanctuaries for the modern nomad.
           </p>
         </div>
 
+        {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, idx) => {
             const Icon = benefit.icon
             return (
               <div
                 key={idx}
-                className="glass rounded-2xl p-8 thin-border hover:border-[#D4A5FF]/50 transition-all duration-300 group hover:bg-[#D4A5FF]/5"
+                className="group bg-white rounded-2xl p-8 border border-[var(--deep-altitude)]/10 hover:border-[var(--terminal-amber)]/30 hover:shadow-xl hover:shadow-[var(--terminal-amber)]/5 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-[#00FFC2] to-[#D4A5FF] mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Icon size={24} className="text-midnight-pearl" />
+                <div
+                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300"
+                  style={{ backgroundColor: `color-mix(in srgb, ${benefit.accent} 12%, transparent)` }}
+                >
+                  <Icon size={24} style={{ color: benefit.accent }} />
                 </div>
-                <h3 className="font-syne font-bold text-white mb-3 text-lg">
+                <h3 className="font-archivo text-lg text-[var(--deep-altitude)] mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-white/60 text-sm leading-relaxed">
+                <p className="text-[var(--deep-altitude)]/60 text-sm leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
             )
           })}
+        </div>
+
+        {/* CTA Banner */}
+        <div className="mt-16 relative rounded-2xl overflow-hidden bg-[var(--deep-altitude)] p-8 md:p-12">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--terminal-amber)]/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-[var(--passport-teal)]/10 rounded-full blur-3xl" />
+
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 className="font-archivo text-2xl md:text-3xl text-[var(--cloud-paper)] mb-2">
+                Ready to Find Your Nest?
+              </h3>
+              <p className="text-[var(--cloud-paper)]/60">
+                Join 50,000+ travelers who carry comfort everywhere they go.
+              </p>
+            </div>
+            <a
+              href="#shop"
+              className="shrink-0 px-8 py-4 bg-[var(--terminal-amber)] text-[var(--deep-altitude)] font-semibold rounded-xl hover:shadow-lg hover:shadow-[var(--terminal-amber)]/30 transition-all duration-300"
+            >
+              Shop the Collection
+            </a>
+          </div>
         </div>
       </div>
     </section>

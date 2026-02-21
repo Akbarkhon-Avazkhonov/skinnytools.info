@@ -7,7 +7,7 @@ import { Footer } from '@/components/footer'
 
 export default function Home() {
   return (
-    <main className="bg-midnight-pearl overflow-hidden">
+    <main className="overflow-hidden">
       <Header />
       <Hero />
       <Categories />

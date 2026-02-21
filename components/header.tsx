@@ -2,58 +2,92 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ShoppingBag } from 'lucide-react'
+
+const navItems = [
+  { label: 'Hardshells', href: '#hardshells' },
+  { label: 'Weekenders', href: '#weekenders' },
+  { label: 'Backpacks', href: '#backpacks' },
+  { label: 'Accessories', href: '#accessories' },
+]
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50">
-      <nav className="glass pulse-glow mx-4 my-4 rounded-full">
-        <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--cloud-paper)]/90 backdrop-blur-md border-b border-[var(--deep-altitude)]/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#00FFC2] to-[#D4A5FF] flex items-center justify-center font-syne font-bold text-midnight-pearl text-sm">S</div>
-            <span className="font-syne font-bold text-lg text-white group-hover:text-[#00FFC2] transition-colors">SkinnyTools</span>
+          <Link href="/" className="flex items-center gap-2">
+            <div className="w-9 h-9 rounded-xl bg-[var(--deep-altitude)] flex items-center justify-center">
+              <span className="font-archivo text-[var(--terminal-amber)] text-sm font-bold">ON</span>
+            </div>
+            <span className="font-archivo text-[var(--deep-altitude)] text-lg tracking-tight">Outdoornests</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="#equipment" className="text-sm text-white/70 hover:text-[#00FFC2] transition-colors">Equipment</Link>
-            <Link href="#categories" className="text-sm text-white/70 hover:text-[#D4A5FF] transition-colors">Categories</Link>
-            <Link href="#professional" className="text-sm text-white/70 hover:text-[#00FFC2] transition-colors">For Professionals</Link>
-            <Link href="#contact" className="text-sm text-white/70 hover:text-[#D4A5FF] transition-colors">Contact</Link>
-          </div>
+          <nav className="hidden md:flex items-center gap-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="px-4 py-2 text-sm text-[var(--deep-altitude)]/70 hover:text-[var(--deep-altitude)] hover:bg-[var(--deep-altitude)]/5 rounded-lg transition-all duration-200"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <button className="px-6 py-2 rounded-full bg-[#00FFC2] text-midnight-pearl font-semibold text-sm hover:shadow-lg hover:shadow-[#00FFC2]/50 transition-all duration-300">
-              Consultation
+          {/* Right actions */}
+          <div className="flex items-center gap-3">
+            <button className="relative p-2 text-[var(--deep-altitude)]/70 hover:text-[var(--deep-altitude)] transition-colors">
+              <ShoppingBag size={20} />
+              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-[var(--terminal-amber)] rounded-full text-[10px] flex items-center justify-center text-[var(--deep-altitude)] font-bold">0</span>
+            </button>
+            <Link
+              href="#shop"
+              className="hidden sm:inline-flex px-5 py-2 bg-[var(--terminal-amber)] text-[var(--deep-altitude)] text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-[var(--terminal-amber)]/30 transition-all duration-300"
+            >
+              Shop Now
+            </Link>
+
+            {/* Mobile toggle */}
+            <button
+              className="md:hidden p-2 text-[var(--deep-altitude)]"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-white"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden border-t border-white/10 px-6 py-4 space-y-3">
-            <Link href="#equipment" className="block text-sm text-white/70 hover:text-[#00FFC2] transition-colors">Equipment</Link>
-            <Link href="#categories" className="block text-sm text-white/70 hover:text-[#D4A5FF] transition-colors">Categories</Link>
-            <Link href="#professional" className="block text-sm text-white/70 hover:text-[#00FFC2] transition-colors">For Professionals</Link>
-            <Link href="#contact" className="block text-sm text-white/70 hover:text-[#D4A5FF] transition-colors">Contact</Link>
-            <button className="w-full px-6 py-2 rounded-full bg-[#00FFC2] text-midnight-pearl font-semibold text-sm hover:shadow-lg hover:shadow-[#00FFC2]/50 transition-all duration-300">
-              Consultation
-            </button>
-          </div>
-        )}
-      </nav>
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="md:hidden bg-[var(--cloud-paper)] border-t border-[var(--deep-altitude)]/10 px-4 py-4">
+          <nav className="flex flex-col gap-1">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className="px-4 py-3 text-sm text-[var(--deep-altitude)]/70 hover:text-[var(--deep-altitude)] hover:bg-[var(--deep-altitude)]/5 rounded-lg transition-all"
+                onClick={() => setIsOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Link
+              href="#shop"
+              className="mt-2 px-5 py-3 bg-[var(--terminal-amber)] text-[var(--deep-altitude)] text-sm font-semibold rounded-lg text-center"
+              onClick={() => setIsOpen(false)}
+            >
+              Shop Now
+            </Link>
+          </nav>
+        </div>
+      )}
     </header>
   )
 }

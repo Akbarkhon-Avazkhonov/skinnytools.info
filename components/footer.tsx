@@ -1,77 +1,85 @@
-'use client'
-
-import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from 'lucide-react'
+import { Mail, Phone, MapPin, Instagram, Twitter } from 'lucide-react'
 
 export function Footer() {
   return (
-    <footer className="relative border-t border-white/10 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 liquid-gradient opacity-5" />
-
-      <div className="relative z-10">
-        {/* Main footer content */}
-        <div className="max-w-7xl mx-auto px-4 py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-            {/* Brand */}
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#00FFC2] to-[#D4A5FF] flex items-center justify-center font-syne font-bold text-midnight-pearl text-sm">S</div>
-                <span className="font-syne font-bold text-white">SkinnyTools</span>
+    <footer className="bg-[var(--deep-altitude)] border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+          {/* Brand */}
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-9 h-9 rounded-xl bg-[var(--terminal-amber)] flex items-center justify-center">
+                <span className="font-archivo text-[var(--deep-altitude)] text-sm font-bold">ON</span>
               </div>
-              <p className="text-white/60 text-sm leading-relaxed">
-                Premium equipment for beauty and wellness professionals.
-              </p>
+              <span className="font-archivo text-[var(--cloud-paper)] text-lg">Outdoornests</span>
             </div>
-
-            {/* Products */}
-            <div>
-              <h4 className="font-syne font-bold text-white mb-4">Products</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-white/60 text-sm hover:text-[#00FFC2] transition-colors">Laser Systems</a></li>
-                <li><a href="#" className="text-white/60 text-sm hover:text-[#00FFC2] transition-colors">Ultrasonic Devices</a></li>
-                <li><a href="#" className="text-white/60 text-sm hover:text-[#00FFC2] transition-colors">Massage Devices</a></li>
-                <li><a href="#" className="text-white/60 text-sm hover:text-[#00FFC2] transition-colors">Cryotherapy</a></li>
-              </ul>
-            </div>
-
-            {/* Company */}
-            <div>
-              <h4 className="font-syne font-bold text-white mb-4">Company</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-white/60 text-sm hover:text-[#D4A5FF] transition-colors">About Us</a></li>
-                <li><a href="#" className="text-white/60 text-sm hover:text-[#D4A5FF] transition-colors">Blog</a></li>
-                <li><a href="#" className="text-white/60 text-sm hover:text-[#D4A5FF] transition-colors">Careers</a></li>
-                <li><a href="#" className="text-white/60 text-sm hover:text-[#D4A5FF] transition-colors">News</a></li>
-              </ul>
-            </div>
-
-            {/* Contact */}
-            <div>
-              <h4 className="font-syne font-bold text-white mb-4">Contact</h4>
-              <div className="space-y-3">
-                <a href="tel:+14155552671" className="flex items-center gap-2 text-white/60 text-sm hover:text-[#00FFC2] transition-colors">
-                  <Phone size={16} />
-                  +1 (415) 555-2671
-                </a>
-                <a href="mailto:info@skinnytools.com" className="flex items-center gap-2 text-white/60 text-sm hover:text-[#00FFC2] transition-colors">
-                  <Mail size={16} />
-                  info@skinnytools.com
-                </a>
-                <div className="flex items-center gap-2 text-white/60 text-sm">
-                  <MapPin size={16} />
-                  San Francisco, USA
-                </div>
-              </div>
+            <p className="text-[var(--cloud-paper)]/50 text-sm leading-relaxed mb-6">
+              Precision-engineered luggage for those who find home on the road. Your next nest is right here.
+            </p>
+            <div className="flex items-center gap-3">
+              <a href="#" className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-[var(--cloud-paper)]/50 hover:bg-[var(--terminal-amber)] hover:text-[var(--deep-altitude)] transition-all duration-300" aria-label="Instagram">
+                <Instagram size={16} />
+              </a>
+              <a href="#" className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center text-[var(--cloud-paper)]/50 hover:bg-[var(--terminal-amber)] hover:text-[var(--deep-altitude)] transition-all duration-300" aria-label="Twitter">
+                <Twitter size={16} />
+              </a>
             </div>
           </div>
 
-          {/* Divider */}
-          <div className="border-t border-white/10 py-8">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <p className="text-white/50 text-sm">
-                © 2024 SkinnyTools. All rights reserved.
-              </p>
-              
+          {/* Products */}
+          <div>
+            <h4 className="font-archivo text-[var(--cloud-paper)] mb-4">Shop</h4>
+            <ul className="space-y-2.5">
+              <li><a href="#" className="text-[var(--cloud-paper)]/50 text-sm hover:text-[var(--terminal-amber)] transition-colors">Hardshell Suitcases</a></li>
+              <li><a href="#" className="text-[var(--cloud-paper)]/50 text-sm hover:text-[var(--terminal-amber)] transition-colors">Weekender Bags</a></li>
+              <li><a href="#" className="text-[var(--cloud-paper)]/50 text-sm hover:text-[var(--terminal-amber)] transition-colors">Adventure Backpacks</a></li>
+              <li><a href="#" className="text-[var(--cloud-paper)]/50 text-sm hover:text-[var(--terminal-amber)] transition-colors">Travel Organizers</a></li>
+              <li><a href="#" className="text-[var(--cloud-paper)]/50 text-sm hover:text-[var(--terminal-amber)] transition-colors">Garment Bags</a></li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h4 className="font-archivo text-[var(--cloud-paper)] mb-4">Company</h4>
+            <ul className="space-y-2.5">
+              <li><a href="#" className="text-[var(--cloud-paper)]/50 text-sm hover:text-[var(--terminal-amber)] transition-colors">Our Story</a></li>
+              <li><a href="#" className="text-[var(--cloud-paper)]/50 text-sm hover:text-[var(--terminal-amber)] transition-colors">Sustainability</a></li>
+              <li><a href="#" className="text-[var(--cloud-paper)]/50 text-sm hover:text-[var(--terminal-amber)] transition-colors">Warranty & Repairs</a></li>
+              <li><a href="#" className="text-[var(--cloud-paper)]/50 text-sm hover:text-[var(--terminal-amber)] transition-colors">Travel Blog</a></li>
+              <li><a href="#" className="text-[var(--cloud-paper)]/50 text-sm hover:text-[var(--terminal-amber)] transition-colors">Careers</a></li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-archivo text-[var(--cloud-paper)] mb-4">Contact</h4>
+            <div className="space-y-3">
+              <a href="tel:+18005551234" className="flex items-center gap-2.5 text-[var(--cloud-paper)]/50 text-sm hover:text-[var(--terminal-amber)] transition-colors">
+                <Phone size={15} />
+                +1 (800) 555-1234
+              </a>
+              <a href="mailto:hello@outdoornests.com" className="flex items-center gap-2.5 text-[var(--cloud-paper)]/50 text-sm hover:text-[var(--terminal-amber)] transition-colors">
+                <Mail size={15} />
+                hello@outdoornests.com
+              </a>
+              <div className="flex items-center gap-2.5 text-[var(--cloud-paper)]/50 text-sm">
+                <MapPin size={15} />
+                Portland, Oregon, USA
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-white/10 pt-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-[var(--cloud-paper)]/40 text-sm">
+              {'© 2026 Outdoornests. All rights reserved.'}
+            </p>
+            <div className="flex items-center gap-6">
+              <a href="#" className="text-[var(--cloud-paper)]/40 text-sm hover:text-[var(--cloud-paper)]/70 transition-colors">Privacy Policy</a>
+              <a href="#" className="text-[var(--cloud-paper)]/40 text-sm hover:text-[var(--cloud-paper)]/70 transition-colors">Terms of Service</a>
+              <a href="#" className="text-[var(--cloud-paper)]/40 text-sm hover:text-[var(--cloud-paper)]/70 transition-colors">Shipping Info</a>
             </div>
           </div>
         </div>

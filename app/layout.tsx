@@ -1,20 +1,19 @@
-import React from "react"
 import type { Metadata } from 'next'
-import { Syne, Plus_Jakarta_Sans } from 'next/font/google'
+import { Archivo_Black, Outfit } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const syne = Syne({ subsets: ["latin"], variable: '--font-syne' });
-const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], variable: '--font-plus-jakarta-sans' });
+const archivoBlack = Archivo_Black({ weight: '400', subsets: ['latin'], variable: '--font-archivo-black' })
+const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit' })
 
 export const metadata: Metadata = {
-  title: 'SkinnyTools | Precision for the Pro',
-  description: 'Curated salon and spa technology for elite practitioners. Premium equipment for aesthetic professionals.',
-  generator: 'v0.app',
+  title: 'Outdoornests | Pack the World. Carry the Comfort.',
+  description: 'Precision-engineered luggage for those who find home on the road. From indestructible hardshells to versatile weekenders.',
   icons: {
     icon: '/favicon.jpg',
     apple: '/favicon.jpg',
   },
+    generator: 'v0.app'
 }
 
 export default function RootLayout({
@@ -23,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${syne.variable} ${plusJakartaSans.variable} font-plus-jakarta-sans antialiased`}>
+    <html lang="en">
+      <body className={`${archivoBlack.variable} ${outfit.variable} font-outfit antialiased`}>
         {children}
         <Analytics />
       </body>
