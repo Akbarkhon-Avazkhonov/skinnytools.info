@@ -65,9 +65,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 {product.name}
               </h1>
 
-              <p className="text-[var(--deep-altitude)] text-2xl font-bold mb-4">
-                {product.price}
-              </p>
+              
 
               <p className="text-[var(--deep-altitude)]/60 leading-relaxed mb-8 text-base">
                 {product.fullDescription}
