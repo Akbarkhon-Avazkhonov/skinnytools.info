@@ -76,35 +76,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 <button className="px-8 py-3.5 rounded-full bg-[var(--terminal-amber)] text-[var(--deep-altitude)] font-semibold hover:shadow-lg hover:shadow-[var(--terminal-amber)]/30 transition-all duration-300">
                   Buy on Amazon
                 </button>
-                <button className="px-8 py-3.5 rounded-full border-2 border-[var(--deep-altitude)]/20 text-[var(--deep-altitude)] font-semit-8 border-t border-[var(--deep-altitude)]/10">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[var(--passport-teal)]/10 flex items-center justify-center">
-                    <Truck size={18} className="text-[var(--passport-teal)]" />
-                  </div>
-                  <div>
-                    <p className="text-[var(--deep-altitude)] text-sm font-semibold">Free Shipping</p>
-                    <p className="text-[var(--deep-altitude)]/40 text-xs">Orders over $100</p>
-                  </div>
                 </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[var(--terminal-amber)]/10 flex items-center justify-center">
-                    <ShieldCheck size={18} className="text-[var(--terminal-amber)]" />
-                  </div>
-                  <div>
-                    <p className="text-[var(--deep-altitude)] text-sm font-semibold">Lifetime Warranty</p>
-                    <p className="text-[var(--deep-altitude)]/40 text-xs">Against defects</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[var(--deep-altitude)]/10 flex items-center justify-center">
-                    <RefreshCw size={18} className="text-[var(--deep-altitude)]" />
-                  </div>
-                  <div>
-                    <p className="text-[var(--deep-altitude)] text-sm font-semibold">30-Day Returns</p>
-                    <p className="text-[var(--deep-altitude)]/40 text-xs">No questions asked</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
