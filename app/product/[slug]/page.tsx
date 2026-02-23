@@ -65,18 +65,49 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 {product.name}
               </h1>
 
-              <p className="text-[var(--deep-altitude)]/60 leading-relaxed mb-6 text-lg">
-                {product.description}
+              <p className="text-[var(--deep-altitude)] text-2xl font-bold mb-4">
+                {product.price}
               </p>
 
-              
+              <p className="text-[var(--deep-altitude)]/60 leading-relaxed mb-8 text-base">
+                {product.fullDescription}
+              </p>
 
-              {/* Action buttons */}
+              {/* Action button */}
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
                 <button className="px-8 py-3.5 rounded-full bg-[var(--terminal-amber)] text-[var(--deep-altitude)] font-semibold hover:shadow-lg hover:shadow-[var(--terminal-amber)]/30 transition-all duration-300">
                   Buy on Amazon
                 </button>
+              </div>
+
+              {/* Key Features */}
+              <div className="mb-8">
+                <h3 className="font-archivo text-lg text-[var(--deep-altitude)] mb-4">Key Features</h3>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {product.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-[var(--deep-altitude)]/70">
+                      <ShieldCheck size={16} className="text-[var(--passport-teal)] shrink-0 mt-0.5" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Specifications */}
+              <div>
+                <h3 className="font-archivo text-lg text-[var(--deep-altitude)] mb-4">Specifications</h3>
+                <div className="border border-[var(--deep-altitude)]/10 rounded-xl overflow-hidden">
+                  {Object.entries(product.specs).map(([key, value], i) => (
+                    <div
+                      key={key}
+                      className={`flex items-center justify-between px-4 py-3 text-sm ${i % 2 === 0 ? 'bg-[var(--deep-altitude)]/5' : ''}`}
+                    >
+                      <span className="text-[var(--deep-altitude)]/50 font-medium">{key}</span>
+                      <span className="text-[var(--deep-altitude)] font-semibold">{value}</span>
+                    </div>
+                  ))}
                 </div>
+              </div>
             </div>
           </div>
         </div>
