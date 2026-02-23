@@ -16,6 +16,7 @@ export const featuredProducts = [
     image: '/products/hardshell.jpg',
     specs: { Material: '100% Polycarbonate', Weight: '8.2 lbs (3.7 kg)', Dimensions: '26 x 17.5 x 11.5 in', Capacity: '68L', Wheels: '4x Silent Spinners', Lock: 'TSA-Approved Combo' },
     features: ['Scratch-resistant matte finish', 'Telescopic aluminum handle', 'Interior compression straps', 'Mesh zip dividers', 'Corner guard protection', 'Expandable design (+15%)'],
+    amazonUrl: 'https://www.amazon.com/dp/B0EXAMPLE1',
   },
   {
     slug: 'canyon-weekender',
@@ -30,6 +31,7 @@ export const featuredProducts = [
     image: '/products/weekender.jpg',
     specs: { Material: 'Waxed Canvas + Leather', Weight: '3.1 lbs (1.4 kg)', Dimensions: '20 x 11 x 10 in', Capacity: '35L', Strap: 'Detachable Shoulder', Closure: 'YKK Brass Zippers' },
     features: ['Separate shoe compartment', 'Padded 15" laptop sleeve', 'Interior zip pocket', 'Develops natural patina', 'Water-resistant treatment', 'Brass hardware accents'],
+    amazonUrl: 'https://www.amazon.com/dp/B0EXAMPLE2',
   },
   {
     slug: 'summit-pack-45l',
@@ -44,6 +46,7 @@ export const featuredProducts = [
     image: '/products/backpack.jpg',
     specs: { Material: 'Ripstop Nylon (recycled)', Weight: '2.9 lbs (1.3 kg)', Dimensions: '28 x 14 x 9 in', Capacity: '45L', Hydration: '3L Reservoir Compatible', Back: 'Ventilated Mesh' },
     features: ['Hydration system compatible', 'Adjustable torso length', 'Rain cover included', 'Top, front & bottom access', 'Hip belt with zip pockets', 'Made from 100% recycled nylon'],
+    amazonUrl: 'https://www.amazon.com/dp/B0EXAMPLE3',
   },
   {
     slug: 'aerocarry-aluminum',
@@ -58,6 +61,7 @@ export const featuredProducts = [
     image: '/products/carryon.jpg',
     specs: { Material: 'Aerospace Aluminum Alloy', Weight: '9.7 lbs (4.4 kg)', Dimensions: '21.5 x 13.5 x 9 in', Capacity: '36L', Wheels: '4x Japanese Hinomoto', Lock: 'Dual TSA-Approved' },
     features: ['Hand-stitched leather handle', 'Reinforced corner guards', 'Flex-divider interior system', 'Silent Hinomoto wheels', 'Lifetime manufacturer warranty', 'Personalized monogram option'],
+    amazonUrl: 'https://www.amazon.com/dp/B0EXAMPLE4',
   },
 ]
 
