@@ -55,20 +55,7 @@ export function Hero() {
           </div>
 
           {/* Trust badges */}
-          <div className="flex flex-wrap gap-6 mt-12">
-            <div className="flex items-center gap-2 text-[var(--cloud-paper)]/60">
-              <Shield size={16} className="text-[var(--passport-teal)]" />
-              <span className="text-xs">10-Year Warranty</span>
-            </div>
-            <div className="flex items-center gap-2 text-[var(--cloud-paper)]/60">
-              <Truck size={16} className="text-[var(--passport-teal)]" />
-              <span className="text-xs">Free Worldwide Shipping</span>
-            </div>
-            <div className="flex items-center gap-2 text-[var(--cloud-paper)]/60">
-              <Award size={16} className="text-[var(--passport-teal)]" />
-              <span className="text-xs">TSA Approved Locks</span>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>
